@@ -30,19 +30,29 @@ def count():
         print(curr, '!')
         curr = curr + 1
 
-def test():
+
+def text():
     print("Let's test your programming knowledge.")
-    # write your code here
-    print('Completed, have a nice day!')
+    print()
+    print('Why do we use methods?')
+    print('1. To repeat a statement multiple times.')
+    print('2. To decompose a program into several small subroutines.')
+    print('3. To determine the execution time of a program.')
+    print('4. To interrupt the execution of a program.')
 
 
-def end():
-    print('Congratulations, have a nice day!')
+def test():
+    if int(input()) == 2:
+        print('Congratulations, have a nice day!')
+    else:
+        print('Please, try again.')
+        test()
 
 
 greet('Aid', '2020')  # change it as you need
 remind_name()
 guess_age()
 count()
+text()
 # ...
-end()
+test()
