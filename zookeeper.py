@@ -123,11 +123,15 @@ animals = [camel, lion, deer, goose, bat, rabbit]
 
 
 def watcher():
-    for animal in animals:
-        print(animals[int(input("Please enter the number of the habitat you would like to view:"))])
-        print("""---
-You've reached the end of the program. To check another habitat, please restart the watcher.""")
-        break
+    while True:
+        habitat = input("Please enter the number of the habitat you would like to view (0-5), or 'exit' to quit: ")
+        if habitat.lower() == 'exit':
+            print("See you later!")
+            break
+        if habitat.isdigit() and 0 <= int(habitat) < len(animals):
+            print(animals[int(habitat)])
+        else:
+            print("Invalid input. Please enter a number between 0 and 5, or 'exit' to quit.")
 
 
 watcher()
